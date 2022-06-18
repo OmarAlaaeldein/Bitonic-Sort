@@ -157,7 +157,7 @@ int main()
             
 
             }
-            cout<<"average for threads: "<< i<<", N of elements: "<<j<<"    ------->>"<<x<<"\n\n";
+            cout<<"average for threads: "<< i<<", N of elements: "<<j<<"    ------->>"<<x/50<<"\n\n";
             
             
         }
