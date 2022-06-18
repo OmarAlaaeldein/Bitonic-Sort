@@ -3,7 +3,10 @@
 #include<iostream>                                                                              //for std::cout ,std::cin
 #include<omp.h>                                                                                 
 #include "hpc_helpers.hpp"
+#include <string>
+#include <chrono>
 using namespace std;
+
 
 void ascendingSwap(int index1 , int index2 , int *ar)                                           //swap two values such that they appear in ascending order in the array
 {
@@ -93,7 +96,7 @@ void bitonicSequenceGenerator(int startIndex , int lastIndex , int *ar)         
             }
 }
 // int main(int argc, char** argv)                                                                                        //main driver function
-void main2(int a, int b)                                                                                        //main driver function
+double main2(int a, int b)                                                                                        //main driver function
 {   
     // int maxNumberOfThreads = stoi(argv[1]);
     // int n= stoi(argv[2]);
@@ -106,7 +109,11 @@ void main2(int a, int b)                                                        
         }
 
 
-TIMERSTART(Paralell_Time)
+
+
+
+auto start = std::chrono::steady_clock::now();
+// TIMERSTART(Paralell_Time)
     omp_set_dynamic(0);                                                                          //disabled so that the os doesnt override the thread settings                                                     
     omp_set_num_threads(maxNumberOfThreads);                                                     //set the no of threads
 
@@ -124,33 +131,35 @@ TIMERSTART(Paralell_Time)
 
 
     bitonicSequenceGenerator(0,n-1,ar);
-TIMERSTOP(Paralell_Time)
-
-    // cout<<"\n";
-    // end = clock();
-
-    // // Calculating total time taken by the program.
-    // double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-    // cout << "Time taken by program is : " << fixed 
-    //         << time_taken << setprecision(5);
-    // cout << " sec " << endl;
-
-
+// TIMERSTOP(Paralell_Time)
+auto end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> diff = end - start;
+        // std::cout << "Time to fill and iterate a vector of " << std::setw(9)
+        //           << " ints : " << diff.count() << " s\n";
+ return    diff.count();
 }
 
+// int main(int argc,char** argv)
 int main()
 {
 
+    // int maxNumberOfThreads = stoi(argv[1]);
+    // int n= stoi(argv[2]);   
+    // cout<<"time: "<< main2(maxNumberOfThreads,n)<<endl;
+
+
     for(int i =1;i<=16;i=i*2){      // threads
         for (int j =8;j<=pow(2,20);j=j*2){    // n elements
-            int x=0;
+            double x=0;
             for (int k =0;k<=4;k++){    
-                cout<< "threads: "<< i<<",  n of elements: " <<j<<"\n";
-                main2(i,j);
-                cout<<"\n";
+                // cout<< "threads: "<< i<<",  n of elements: " <<j<<"\n";
+                x+=main2(i,j);
+            
 
             }
-
+            cout<<"average for threads: "<< i<<", N of elements: "<<j<<"    ------->>"<<x<<"\n\n";
+            
+            
         }
 
     }
