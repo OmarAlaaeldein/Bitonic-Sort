@@ -1,8 +1,7 @@
 # Bitonic Sort 
 Bitonic Sort is a classic parallel algorithm for sorting.
 
-    Bitonic sort does O(n Log 2n) comparisons.
-    The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
+    Bitonic sort does O(n Log 2n) comparisons. The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
 
 To understand Bitonic Sort, we must first understand what is Bitonic Sequence and how to make a given sequence Bitonic.
 
