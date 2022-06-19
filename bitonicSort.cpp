@@ -1,10 +1,9 @@
-// richu shaji abraham richursa
-#include <bits/stdc++.h>
 #include<iostream>                                                                              //for std::cout ,std::cin
 #include<omp.h>                                                                                 
 #include "hpc_helpers.hpp"
 #include <string>
 #include <chrono>
+#include <cmath>
 using namespace std;
 
 
@@ -165,3 +164,4 @@ int main()
     }
 
 }
+// compile with "g++ -fopenmp -O2 -std=c++14 .\bitonicSort.cpp -o hello" then run with "./hello"
