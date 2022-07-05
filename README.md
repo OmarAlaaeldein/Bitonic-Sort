@@ -53,11 +53,11 @@ Analysis of Bitonic Sort
 
 To form a sorted sequence of length n from two sorted sequences of length n/2, log(n) comparisons are required (for example: log(8) = 3 when sequence size. Therefore, The number of comparisons T(n) of the entire sorting is given by:
 
-T(n) = log(n) + T(n/2)
+$T(n) = \log{}{n} + T(\frac{n}{2})$
 
 The solution of this recurrence equation is
 
-$T(n) = \log{}{n} + log{}{n}-1 + \log{}{n}-2 + … + 1 = \log{}{n} · (\log{}{n}+1) / 2$
+$T(n) = \log{}{n} + \log{}{n}-1 + \log{}{n}-2 + … + 1 = \log{}{n} · (\log{}{n}+1) / 2$
 
-As, each stage of the sorting network consists of n/2 comparators. Therefore total Θ(n log2n) comparators.
+As, each stage of the sorting network consists of n/2 comparators. Therefore total $Θ(n log2n)$ comparators.
 
