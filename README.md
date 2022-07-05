@@ -57,7 +57,7 @@ T(n) = log(n) + T(n/2)
 
 The solution of this recurrence equation is
 
-T(n) = log(n) + log(n)-1 + log(n)-2 + … + 1 = log(n) · (log(n)+1) / 2
+$T(n) = \log{}{n} + log{}{n}-1 + \log{}{n}-2 + … + 1 = \log{}{n} · (\log{}{n}+1) / 2$
 
 As, each stage of the sorting network consists of n/2 comparators. Therefore total Θ(n log2n) comparators.
 
