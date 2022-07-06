@@ -23,9 +23,11 @@ Next, we take two 4 element bitonic sequences, sorting one in ascending order, t
 Convert the following sequence to bitonic sequence: $3, 7, 4, 8, 6, 2, 1, 5$
 
 Step 1: Consider each 2-consecutive elements as bitonic sequence and apply bitonic sort on each 2- pair elements. In next step, take two 4 element bitonic sequences and so on.
+
 ![alt text](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/bit2.png)
 
-Note: x0 and x1 are sorted in ascending order and x2 and x3 in descending order and so on
+Note: $x_{0}$ and $x_{1}$ are sorted in ascending order and x2 and x3 in descending order and so on.
+
 ![alt text](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/bitonic2.png)
 
 
@@ -48,7 +50,8 @@ We repeat the same process within two bitonic sequences and we get four bitonic 
 If we repeat this process one more time we get 8 bitonic sequences of size n/8 which is 1. Since all these bitonic sequence are sorted and every bitonic sequence has one element, we get the sorted array.
 
 
-Step 2: Two 4 element bitonic sequences : A(3,7,8,4) and B(2,6,5,1) with comparator length as 2
+Step 2: Two 4 element bitonic sequences : A(3,7,8,4) and B(2,6,5,1) with comparator length as 2.
+
 ![alt text](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/bitonic3.png)
 
 Analysis of Bitonic Sort
