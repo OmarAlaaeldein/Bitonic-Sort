@@ -54,7 +54,7 @@ Step 2: Two 4 element bitonic sequences : A(3,7,8,4) and B(2,6,5,1) with compara
 
 ![alt text](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/bitonic3.png)
 
-Analysis of Bitonic Sort
+# Analysis of Bitonic Sort
 
 To form a sorted sequence of length n from two sorted sequences of length n/2, log(n) comparisons are required (for example: $\log{}{8} = 3$ when sequence size. Therefore, The number of comparisons $T(n)$ of the entire sorting is given by:
 
